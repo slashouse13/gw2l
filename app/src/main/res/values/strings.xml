@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gw2Tool</string>
+    <string name="title_activity_today_dailies">Today\'s Dailies</string>
+    <string name="title_activity_tomorrow_dailies">Tomorrow\'s Dailies</string>
+    <string name="title_activity_events">World Bosses</string>
+    <string name="title_activity_map_events">Map Events</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_pof_events">pofEvents</string>
+
+</resources>
