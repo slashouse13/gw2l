@@ -23,8 +23,8 @@ public class MapEvents extends Activity{
 
     static String[] allTheMaps = {"Auric Basin", "Dragon's Stand", "Dry Top",
             "Verdant Brink", "Tangled Depths"};
-    double[] firstSpawns = {0.3,0.3,1.5,0.45,0.4};    //Summer Times
-    //   double[] firstSpawns = {1.3,1.3,0.5,1.45,1.4}; //Winter Times
+    //double[] firstSpawns = {0.3,0.3,1.5,0.45,0.4};    //Summer Times
+    double[] firstSpawns = {1.3,1.3,0.5,1.45,1.4}; //Winter Times
     static final int DAY = 1440;
     int[] backPics={R.drawable.ab,R.drawable.ds, R.drawable.td, R.drawable.vb ,R.drawable.dt};
     ArrayList<String[]> preEvents = new ArrayList<>();

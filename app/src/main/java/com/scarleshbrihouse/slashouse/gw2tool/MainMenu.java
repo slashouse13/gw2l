@@ -51,8 +51,9 @@ public class MainMenu extends Activity {
         int fromHere=0;
         while(currentTime[0] > dayNightCycle.get(fromHere).date[0])
             fromHere++;
+        if(fromHere>0)
+            fromHere--;
 
-        fromHere--;
 
         int dayPhase= 0;    //To set next day phase background in case activity's up for day phase change
 

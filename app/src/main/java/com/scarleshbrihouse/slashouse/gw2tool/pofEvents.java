@@ -20,7 +20,8 @@ import java.util.TimeZone;
 import static java.math.BigDecimal.ROUND_UNNECESSARY;
 
 public class pofEvents extends Activity {
-    double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
+    //double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
+    double[] firstSpawns = {0.05, 1.00, 1.00, 1.45}; //UTC
     static String[] allTheMaps = {"Crystal Oasis", "Desert Highlands", "Domain of Vabbi",
             "Domain of Istan"};
     int[] backPics={R.drawable.choya,R.drawable.highlands, R.drawable.zealots, R.drawable.palawadan};
