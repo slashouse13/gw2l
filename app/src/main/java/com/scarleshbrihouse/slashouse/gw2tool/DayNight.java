@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 
 public class DayNight {
-    static double firstSpawn = 1.3;   //Winter time
-    //private static double firstSpawn = 0.3;     //Summer time
+    //static double firstSpawn = 1.3;   //Winter time
+    private static double firstSpawn = 0.3;     //Summer time
     private static double[] durations = {1.1,0.05,0.4,0.05}; //Day,Dusk,Night,Dawn
     public final static String[] ddnd = {"Day","Dusk","Night","Dawn"};
 
