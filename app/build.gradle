@@ -15,8 +15,8 @@ android {
         applicationId "com.scarleshbrihouse.slashouse.gw2tool"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 5
-        versionName "1.7"
+        versionCode 6
+        versionName "1.7.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
