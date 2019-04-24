@@ -15,8 +15,13 @@ android {
         applicationId "com.scarlesh.slashouse.gw2tool"
         minSdkVersion 14
         targetSdkVersion 26
+<<<<<<< HEAD
         versionCode 1
         versionName "1.0"
+=======
+        versionCode 5
+        versionName "1.7"
+>>>>>>> parent of d3fa7be... Git update
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
