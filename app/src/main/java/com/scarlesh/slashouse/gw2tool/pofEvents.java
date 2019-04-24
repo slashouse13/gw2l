@@ -21,7 +21,12 @@ import static java.math.BigDecimal.ROUND_UNNECESSARY;
 
 public class pofEvents extends Activity {
 <<<<<<< HEAD:app/src/main/java/com/scarlesh/slashouse/gw2tool/pofEvents.java
+<<<<<<< HEAD:app/src/main/java/com/scarlesh/slashouse/gw2tool/pofEvents.java
     double[] firstSpawns = {1.05, 0.00, 2.00, 0.45, 0.45, 0.00}; //UTC+1
+=======
+    //double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
+    double[] firstSpawns = {0.05, 1.00, 1.00, 1.45}; //UTC
+>>>>>>> parent of 0720875... Updated with Summer Time:app/src/main/java/com/scarleshbrihouse/slashouse/gw2tool/pofEvents.java
 =======
     //double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
     double[] firstSpawns = {0.05, 1.00, 1.00, 1.45}; //UTC
