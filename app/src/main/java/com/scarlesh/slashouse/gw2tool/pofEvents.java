@@ -20,22 +20,9 @@ import java.util.TimeZone;
 import static java.math.BigDecimal.ROUND_UNNECESSARY;
 
 public class pofEvents extends Activity {
-<<<<<<< HEAD:app/src/main/java/com/scarlesh/slashouse/gw2tool/pofEvents.java
-<<<<<<< HEAD:app/src/main/java/com/scarlesh/slashouse/gw2tool/pofEvents.java
-<<<<<<< HEAD:app/src/main/java/com/scarlesh/slashouse/gw2tool/pofEvents.java
+
     double[] firstSpawns = {1.05, 0.00, 2.00, 0.45, 0.45, 0.00}; //UTC+1
-=======
-    //double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
-    double[] firstSpawns = {0.05, 1.00, 1.00, 1.45}; //UTC
->>>>>>> parent of 0720875... Updated with Summer Time:app/src/main/java/com/scarleshbrihouse/slashouse/gw2tool/pofEvents.java
-=======
-    //double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
-    double[] firstSpawns = {0.05, 1.00, 1.00, 1.45}; //UTC
->>>>>>> parent of 0720875... Updated with Summer Time:app/src/main/java/com/scarleshbrihouse/slashouse/gw2tool/pofEvents.java
-=======
-    //double[] firstSpawns = {1.05, 0.00, 2.00, 0.45}; //UTC+1
-    double[] firstSpawns = {0.05, 1.00, 1.00, 1.45}; //UTC
->>>>>>> parent of 0720875... Updated with Summer Time:app/src/main/java/com/scarleshbrihouse/slashouse/gw2tool/pofEvents.java
+    //double[] firstSpawns = {0.05, 1.00, 1.00, 1.45, 1.45, 1.00}; //UTC
     static String[] allTheMaps = {"Crystal Oasis", "Desert Highlands", "Domain of Vabbi",
             "Domain of Istan", "Thunderhead Keep","The Oil Floes", "Jahai Bluffs"};
     int[] backPics={R.drawable.choya,R.drawable.highlands, R.drawable.zealots, R.drawable.palawadan, R.drawable.north_thund, R.drawable.oil_thund, R.drawable.branded_shatty};
