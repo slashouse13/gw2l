@@ -12,11 +12,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId "com.scarleshbrihouse.slashouse.gw2tool"
+        applicationId "com.scarlesh.slashouse.gw2tool"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 6
-        versionName "1.7.5"
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

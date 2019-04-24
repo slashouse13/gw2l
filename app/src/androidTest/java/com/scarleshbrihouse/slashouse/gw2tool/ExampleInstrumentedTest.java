@@ -1,4 +1,4 @@
-package com.scarleshbrihouse.slashouse.gw2tool;
+package com.scarlesh.slashouse.gw2tool;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.scarleshbrihouse.slashouse.gw2tool", appContext.getPackageName());
+        assertEquals("com.scarlesh.slashouse.gw2tool", appContext.getPackageName());
     }
 }
