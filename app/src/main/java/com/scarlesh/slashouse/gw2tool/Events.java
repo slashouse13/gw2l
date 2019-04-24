@@ -27,7 +27,7 @@ public class Events extends Activity {
     "Laughing Gull Island\n(Bloodtide Coast)","Maelstrom's Bile\n(Mount Maelstrom)","Splintered Coast\n(Sparkfly Fen)",
     "Firth of Revanion\nBloodtide Coast","Driftglass Springs or Southsun Shoals \n(Southsun Cove)"};
     //Winter time
-    /*double[] timeShatter=       {01.00,04.00,07.00,10.00,13.00,16.00,19.00,22.00};
+    double[] timeShatter=       {01.00,04.00,07.00,10.00,13.00,16.00,19.00,22.00};
     double[] timeJungleWurm=    {01.15,03.15,05.15,07.15,09.15,11.15,13.15,15.15,17.15,19.15,21.15,23.15};
     double[] timeModniirUlgoth= {01.30,04.30,07.30,10.30,13.30,16.30,19.30,22.30};
     double[] timeShadowBehemoth={01.45,03.45,05.45,07.45,09.45,11.45,13.45,15.45,17.45,19.45,21.45,23.45};
@@ -39,8 +39,8 @@ public class Events extends Activity {
     double[] timeMegadestroyer= {00.30,03.30,06.30,09.30,12.30,15.30,18.30,21.30};
     double[] teqaSpawn =        {00.00,03.15,07.00,11.30,16.00,19.00};
     double[] ttSpawn =          {01.00,04.15,08.00,12.30,17.00,20.00};
-    double[] karkaSpawn=        {02.00,06.00,10.30,15.00,18.00,23.00};*/
-    double[] timeShatter=       {02.00,05.00,08.00,11.00,14.00,17.00,20.00,23.00};
+    double[] karkaSpawn=        {02.00,06.00,10.30,15.00,18.00,23.00};
+    /*double[] timeShatter=       {02.00,05.00,08.00,11.00,14.00,17.00,20.00,23.00};
     double[] timeJungleWurm=    {00.15,02.15,04.15,06.15,08.15,10.15,12.15,14.15,16.15,18.15,20.15,22.15};
     double[] timeModniirUlgoth= {00.30,02.30,05.30,08.30,11.30,14.30,17.30,20.30};
     double[] timeShadowBehemoth={00.45,02.45,04.45,06.45,08.45,10.45,12.45,14.45,16.45,18.45,20.45,22.45};
@@ -52,7 +52,7 @@ public class Events extends Activity {
     double[] timeMegadestroyer= {01.30,04.30,07.30,10.30,13.30,16.30,19.30,22.30};
     double[] teqaSpawn =        {01.00,04.15,08.00,12.30,17.00,20.00};
     double[] ttSpawn =          {02.00,05.15,09.00,13.30,18.00,21.00};
-    double[] karkaSpawn=        {00.00,03.00,07.00,11.30,16.00,19.00};
+    double[] karkaSpawn=        {00.00,03.00,07.00,11.30,16.00,19.00};*/
     final public SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
     int[] backPics = {R.drawable.sha, R.drawable.jw, R.drawable.mu, R.drawable.sb, R.drawable.gm, R.drawable.ss,
             R.drawable.jor, R.drawable.fe, R.drawable.tc, R.drawable.md, R.drawable.teq, R.drawable.tt, R.drawable.kq};
