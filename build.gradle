@@ -12,7 +12,11 @@ buildscript {
     dependencies {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:3.4.0'
+=======
+        classpath 'com.android.tools.build:gradle:3.3.0'
+>>>>>>> parent of 0720875... Updated with Summer Time
 =======
         classpath 'com.android.tools.build:gradle:3.3.0'
 >>>>>>> parent of 0720875... Updated with Summer Time
