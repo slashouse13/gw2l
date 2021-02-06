@@ -26,21 +26,20 @@
             android:name=".TodayDailies"
             android:label="@string/title_activity_today_dailies" />
         <activity
-            android:name=".Events"
+            android:name=".WorldBosses"
             android:label="@string/title_activity_events" />
         <activity
-            android:name=".MapEvents"
-            android:label="@string/title_activity_map_events" />
+            android:name=".hotEvents"
+            android:label="@string/title_activity_hot_events" />
+        <activity
+            android:name=".pofEvents"
+            android:label="@string/title_activity_pof_events" />
 
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.0.0"
             tools:replace="android:value" />
 
-        <activity
-            android:name=".pofEvents"
-            android:label="@string/title_activity_pof_events"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

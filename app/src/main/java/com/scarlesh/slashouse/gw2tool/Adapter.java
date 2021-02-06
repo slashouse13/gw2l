@@ -1,8 +1,6 @@
 package com.scarlesh.slashouse.gw2tool;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +9,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-import com.scarlesh.slashouse.gw2tool.R;
 
 import java.util.ArrayList;
 
@@ -32,6 +28,7 @@ class Adapter extends ArrayAdapter<String> {
         this.user=usr;
         this.c=con;
     }
+
     public Adapter (Context con, String[] entities, Double[] times, Double[] spawn, int[] pic, String[] wp){
         super(con,R.layout.row_list,entities);
         this.ent=entities;
@@ -69,7 +66,6 @@ class Adapter extends ArrayAdapter<String> {
         TextView entity,timeLeft,waypoint,timeSpawn;
     }
     private int lastpos= -1;
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public View getView (int pos, View conView, ViewGroup parent){
         final ViewHold hold;
@@ -112,14 +108,14 @@ class Adapter extends ArrayAdapter<String> {
             if(pictures.length==siz) {
                 for (int count = 0; count < preEvents.size(); count++)
                     for(int j=0;j<preEvents.get(count).length;j++)
-                        if (ent[pos] == preEvents.get(count)[j]) {
+                        if (ent[pos].equals(preEvents.get(count)[j])) {
                             conView.setBackground(ContextCompat.getDrawable(c, pictures[count]));
                             hold.waypoint.setText("");
                         }
             }
             else
-                for(int cnt=0;cnt<Events.allTheBosses.length;cnt++)
-                    if(ent[pos]==Events.allTheBosses[cnt]) {
+                for(int cnt=0;cnt<WorldBosses.allTheBosses.length;cnt++)
+                    if(ent[pos].equals(WorldBosses.allTheBosses[cnt])) {
                         conView.setBackground(ContextCompat.getDrawable(c, pictures[cnt]));
                         hold.waypoint.setText(wp[cnt]);
                     }

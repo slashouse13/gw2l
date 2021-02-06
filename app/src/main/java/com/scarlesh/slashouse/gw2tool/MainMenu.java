@@ -1,11 +1,8 @@
 package com.scarlesh.slashouse.gw2tool;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.StrictMode;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,37 +11,35 @@ import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.app.Activity;
-import com.scarlesh.slashouse.gw2tool.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Locale;
-import java.util.TimeZone;
 
 public class MainMenu extends Activity {
-    public final static int TODISPLAY=15;
+    public final static int TODISPLAY = 15;
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final String[] web = {"https://api.guildwars2.com/v2/achievements/daily",
-                "https://api.guildwars2.com/v2/achievements/daily/tomorrow"};
+        final String[] web = {
+                "https://api.guildwars2.com/v2/achievements/daily",
+                "https://api.guildwars2.com/v2/achievements/daily/tomorrow"
+        };
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         setContentView(R.layout.activity_dailies);
 
-        final CheckBox level80 = (CheckBox) findViewById(R.id.eighty);
+        final CheckBox level80 = findViewById(R.id.eighty);
         level80.setChecked(true);
-        final Button tomorrowButton =(Button)findViewById(R.id.tomorrow);
-        final Button todayButton =(Button)findViewById(R.id.today);
-        final Button eventsButton =(Button)findViewById(R.id.events);
-        final Button mapEventsButton = (Button)findViewById(R.id.mapEvents);
-        final Button pofButton =(Button)findViewById(R.id.pofButotn);
-        final RelativeLayout back = (RelativeLayout)findViewById(R.id.lay);
+        final Button tomorrowButton = findViewById(R.id.tomorrow);
+        final Button todayButton = findViewById(R.id.today);
+        final Button eventsButton = findViewById(R.id.events);
+        final Button mapEventsButton = findViewById(R.id.mapEvents);
+        final Button pofButton = findViewById(R.id.pofButotn);
+        final RelativeLayout back = findViewById(R.id.lay);
         final int[] backPics = {R.drawable.daysky,R.drawable.dusksky,R.drawable.nightsky,R.drawable.dusksky};
-        final TextView timeLeft = (TextView)findViewById(R.id.ddnd);
+        final TextView timeLeft = findViewById(R.id.ddnd);
 
         ArrayList<Boss> dayNightCycle = DayNight.getCycle();
         double[] currentTime = getDate();
@@ -74,17 +69,23 @@ public class MainMenu extends Activity {
                 }
             }
             fromHere++;
-        long time = (long) (MapEvents.sumDates(currentTime[0],dayNightCycle.get(fromHere).date[0])*60000);
+        long time = 0;
+//        try {
+//            time = (long) (MapEvents.sumDates(currentTime[0],dayNightCycle.get(fromHere).date[0])*60000);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
         final String currentSky = dayNightCycle.get(fromHere-1).name, nextSky=dayNightCycle.get(fromHere).name;
         final boolean[] changeBack = {false};
         new CountDownTimer(time, 1000){
             public void onTick(long millisUntilFinished){
-                int timeToDisplay= (int) (millisUntilFinished/1000);
-                int h=(timeToDisplay/60),m=timeToDisplay%60;
+                int timeToDisplay = (int) (millisUntilFinished/1000);
+//                int h = (timeToDisplay / 60), m = timeToDisplay % 60;
                 //timeLeft.setText(currentSky+" will expire in : "+h+":"+String.format("%02d", (m+1)%60));
             }
-            public  void onFinish(){
-                timeLeft.setText(nextSky + " is coming!");
+            public void onFinish(){
+                String soon = nextSky + " is coming!";
+                timeLeft.setText(soon);
                 changeBack[0] =true;
             }
         }.start();
@@ -119,11 +120,11 @@ public class MainMenu extends Activity {
             }
         });
 
-        //EVENTS
+        //World Bosses
         eventsButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(MainMenu.this, Events.class);
+                intent = new Intent(MainMenu.this, WorldBosses.class);
                 startActivity(intent);
                 }
             });
@@ -131,7 +132,7 @@ public class MainMenu extends Activity {
         mapEventsButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(MainMenu.this, MapEvents.class);
+                intent = new Intent(MainMenu.this, hotEvents.class);
                 startActivity(intent);
             }
         });
@@ -150,14 +151,8 @@ public class MainMenu extends Activity {
         String current = sdf.format(calendar.getTime()).replace(":",".");
         //Little Oopsie over here, basically at midnight during winter time, hours went in negative values
         double time = Double.parseDouble(current);
-        if (time<1.0 && Events.DST>0)
-            //double negative=time-Events.DST;
-            time+=23.0;
-        else
-            time-=Events.DST;
 
-        TimeZone tz = TimeZone.getDefault();
-        final double timeZone = Events.getTimeZoneDiff(tz.getDisplayName(false,tz.SHORT, Locale.getDefault()));
+        final double timeZone = GWToolDate.getTimeZoneDiff();
         double[] ret = {time,timeZone};
         return ret;
     }

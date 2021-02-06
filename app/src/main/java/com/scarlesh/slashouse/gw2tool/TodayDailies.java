@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.widget.ListView;
 
-import com.scarlesh
-        .slashouse.gw2tool.R;
-
 import java.util.ArrayList;
 
-@SuppressWarnings("deprecation")
+
 public class TodayDailies extends Activity {
     ListView layv;
+    private static final String[]listOfGameTypes = {"pve","pvp","wvw","special"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,7 @@ public class TodayDailies extends Activity {
         int[] whoCanPlay = new int[dim-less];
         Double[] levels = new Double[dim-less];
 
-        layv= (ListView) findViewById(R.id.listdailies);
+        layv = findViewById(R.id.listdailies);
         less=0;
         for (int i=0;i<dim;i++) {
             if(lvl80 && toBeWritten.get(i).maxLvl==80) {

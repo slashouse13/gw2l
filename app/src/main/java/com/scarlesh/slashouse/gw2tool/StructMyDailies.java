@@ -25,8 +25,7 @@ public class StructMyDailies {
         ArrayList<StructMyDailies> collect = new ArrayList<>();
         int c=0;
         for (Structures itemInList : shiny){
-            //String[] temp = itemInList.split("\t");
-            if(c>(shiny.size()-16))
+            if(c > (shiny.size() - 16))
                 itemInList.type = "fractal";
             collect.add(new StructMyDailies(itemInList.type,itemInList.id, itemInList.max,itemInList.access));       //Everyone
             c++;
